@@ -11,29 +11,18 @@ def bubble_sort1(base_num, sort_num)
 
   count = 0
 
-  until (count == 4) do
+  until (count == sort_num-1) do
     count = 0
     sort_index = 1
     
-    4.times do
-#      sleep 0.1
-#      p array
-#      p "sort_index:#{sort_index}"
-#      p "count:#{count}"
-      
+    (sort_num-1).times do
       if array[sort_index-1] < array[sort_index]
-#        p "NoChange"
-#        puts
         count = count + 1
       else
         array[sort_index-1], array[sort_index] = array[sort_index], array[sort_index-1]
-#        p "Change #{array[sort_index-1]} & #{array[sort_index]}"
-#        puts
       end
       sort_index = sort_index + 1
     end
-#    p array
-#    puts
   end
   p 'End ARRAY'
   p array
