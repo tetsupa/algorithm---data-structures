@@ -23,19 +23,13 @@ class QuickSort
     return if (bottom >= top)
     
     div = data[bottom]
-    p div
-    sleep 2
+
     while lower < upper
       while (lower <= upper && data[lower] <= div )
         lower += 1
-        p lower, data[lower], upper, data[upper]
-        sleep 3
       end
-      
       while (lower <= upper && data[upper] > div )
         upper -= 1
-        p lower, data[lower], upper, data[upper]
-        sleep 3
       end
       
       if (lower < upper)
@@ -43,7 +37,6 @@ class QuickSort
         data[lower] = data[lower]
         data[lower] = data[upper]
         data[upper] = temp
-        p 'change', data[lower],data[upper]
       end
       p data
     end
